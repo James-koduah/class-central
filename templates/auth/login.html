@@ -1,0 +1,30 @@
+{% extends "auth/auth_base" %}
+
+
+{% block head %}
+	<title>Login | Teemboom Comments</title>
+{% endblock %}
+
+
+{% block body %}
+	<header id='form_header'>Login</header>
+	<form action='/login' method='POST'>
+		<div>
+			<p>Email</p>
+			<input name='email' placeholder='Enter your email' value='{{email}}' type='email' required>
+		</div>
+		<div>
+			<p>Password</p>
+			<input name='password' placeholder='Enter your password' type='password' required>
+		</div>
+		{% if error %}
+		<div id='error'>
+			<h6>{{error}}</h6>
+		</div>
+		{% endif %}
+		<div>
+                        <button>Login</button>
+                </div>
+		<a id='redirect' href='/signup'>Don't Have An Account - Sign Up</a>
+	</form>
+{% endblock %}

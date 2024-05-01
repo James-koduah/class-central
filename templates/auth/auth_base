@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth/auth_base.css') }}">
+    <script defer src="{{ url_for('static', filename='base/base.js') }}"></script>
+    <link rel='icon' type='image/x-icon' href="{{url_for('static', filename='favicon.ico') }}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+	<main>
+		<section>
+		{% block body %}
+		{% endblock %}
+		</section>
+	</main>
+</body>
+</html>

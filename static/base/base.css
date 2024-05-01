@@ -1,0 +1,156 @@
+@font-face {
+    font-family: cabin;
+    src: url(../fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf);
+    font-weight: 100 800;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --blue: #0770cc;
+    --at-bg: #161858;
+    --ma-bg: #fff;
+    --ma-bg2: #f7f7f7;
+    --su-bg: #e1e1e1;
+    --text-color: #333;
+    --text-color-light: #666;
+    --border-color: #ccc;
+    /*
+    --ma-bg: #1c1c1c;
+    --ma-bg2: #1f1f1f;
+    --su-bg: #222;
+    --text-color: #ddd;
+    --text-color-light: #aaa;
+    --border-color: #aaa;
+    */
+    --ma-bg: #f1eff1;
+    --ma-bg2: #f1eff1;
+    --su-bg: #e1e1e1;
+    --text-color: #222;
+    --text-color-light: #666;
+    --border-color: #ccc;
+    --sans: Oscine, sans-serif;
+    --cam: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --verdana: Verdana, Geneva, Tahoma, sans-serif;
+    --cabin-ver: "Cabin", Verdana, Geneva, Tahoma, sans-serif;
+    --cabin-sans: "Cabin", Oscine, sans-serif;
+    --mons: "Montserrat", Arial, Tahoma, sans-serif;
+    --museo: "Museo Sans Rounded",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --open-sans: open sans,Arial,Verdana,Sans-Serif;
+    --apercu: 'Apercu',Helvetica,Arial,sans-serif;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+input, textarea, button{
+	border: none;
+	color: inherit;
+}
+button, a{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--ma-bg);
+    color: var(--text-color);
+    font-size: 5px;
+    font-family: var(--cabin-sans);
+    overflow-x: hidden;
+}
+
+
+.action_button{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 20px;
+    font-size: 2.5em;
+    font-weight: 600;
+    border-radius: 7px;
+    border: 1px #aaa solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.action_button ion-icon{
+    font-size: 130%;
+    margin: 0 3px;
+}
+.action_button:hover{
+    background: #000;
+    color: #eee;
+    font-size: 2.45em;
+}
+
+
+.my_popup{
+    position: fixed;
+    width: 400px;
+    max-width: 80vw;
+    min-height: 100px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px var(--border-color) solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my_popup_main{
+    width: 90%;
+    padding: 15px 5% 25px 5%;
+}
+.my_popup header{
+    width: 100%;
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.my_popup p{
+    width: 100%;
+    font-size: 3.3em;
+    text-align: center;
+}
+
+.my_popup button{
+        margin: 10px auto;
+        padding: 6px 15px;
+        border: 1px #000 solid;
+}
+
+
+#my_popup_close{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background: transparent;
+}
+
