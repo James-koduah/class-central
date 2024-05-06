@@ -4,17 +4,14 @@ apt update -y
 apt install python3-pip -y
 apt-get install pkg-config -y
 pip install pkgconfig -y
-apt install mysql-server -y
 apt-get install python3-dev -y
-apt-get install libmysqlclient-dev -y
 apt-get install zlib1g-dev -y
-pip3 install mysqlclient
 
-pip3 install SQLAlchemy
 pip3 install Flask
 pip install flask-socketio
 pip install -U flask-cors
 pip install eventlet
+pip install pymongo
 pip install bcrypt
 pip install gunicorn
 pip install Flask-OAuthlib

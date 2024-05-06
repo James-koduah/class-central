@@ -4,12 +4,14 @@ import requests
 from utils import auth_user
 from mongodb_engine.users import users
 from flask_cors import CORS
+from blueprints.dashboard import dashboard
 app = Flask(__name__)
 CORS(app)
 app.secret_key = '499u3u92u402u3uu44u2u01u4u4i'
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 
+app.register_blueprint(dashboard)
 
 @app.route('/')
 def home():
@@ -35,14 +37,10 @@ def login():
         return redirect('/dashboard')
     return render_template('auth/login.html')
 
-
-
-
 @app.route('/logout', strict_slashes=False)
 def logout():
     session.clear()
     return redirect('/')
-
 
 @app.route('/signup', methods=['post', 'get'], strict_slashes=False)
 def signup():
@@ -63,10 +61,6 @@ def signup():
 
 
 
-@app.route('/dashboard', methods=['post', 'get'], strict_slashes=False)
-@auth_user
-def dashboard():
-    return render_template('dashboard/main.html', user=g.user)
 
 
 if __name__ == '__main__':
